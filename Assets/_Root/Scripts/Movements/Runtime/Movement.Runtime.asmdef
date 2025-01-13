@@ -1,0 +1,16 @@
+{
+    "name": "Movement.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dff3b8b9c7079db43a75784c94d68a66"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
