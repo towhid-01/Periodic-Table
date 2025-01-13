@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87321caaa1e553c46807d892b8cccc9c, type: 3}
-  m_Name: Hydrogen
+  m_Name: Carbon
   m_EditorClassIdentifier: 
-  elementName: Hydrogen
-  neutrons: 1
-  protons: 1
-  electrons: 1
+  elementName: Carbon
+  neutronCount: 6
+  protonCount: 6
+  electronCount: 6

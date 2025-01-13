@@ -6,14 +6,14 @@ namespace _Root.Scripts.Elements.Runtime
     public class ElementScriptableObject : ScriptableObject
     {
         public string elementName;
-        public int neutronCount = 1;
-        public int protonCount = 0;
-        public int electronCount = 1;
+        public int neutrons = 1;
+        public int protons = 0;
+        public int electrons = 1;
 
         public override string ToString()
         {
             return
-                $"{nameof(elementName)}: {elementName}, {nameof(neutronCount)}: {neutronCount}, {nameof(protonCount)}: {protonCount}, {nameof(electronCount)}: {electronCount}";
+                $"{nameof(elementName)}: {elementName}, {nameof(neutrons)}: {neutrons}, {nameof(protons)}: {protons}, {nameof(electrons)}: {electrons}";
         }
     }
 }

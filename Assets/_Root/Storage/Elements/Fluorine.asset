@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87321caaa1e553c46807d892b8cccc9c, type: 3}
-  m_Name: Helum
+  m_Name: Fluorine
   m_EditorClassIdentifier: 
-  elementName: Helum
-  neutronCount: 2
-  protonCount: 2
-  electronCount: 2
+  elementName: Nitrogen
+  neutrons: 0
+  protons: 0
+  electrons: 0
