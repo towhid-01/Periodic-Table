@@ -1,9 +1,7 @@
 {
     "name": "Movement.Runtime",
     "rootNamespace": "",
-    "references": [
-        "GUID:dff3b8b9c7079db43a75784c94d68a66"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
