@@ -1,6 +1,7 @@
 ﻿using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace _Root.Scripts.Spawners.Runtime.Elements
@@ -8,7 +9,7 @@ namespace _Root.Scripts.Spawners.Runtime.Elements
     [Serializable]
     public struct SubAtomicParticleConfig
     {
-        [SerializeField] [DisableInEditorMode] public int particleCount;
+        [FormerlySerializedAs("particleCount")] [SerializeField] [DisableInEditorMode] public int particleRemaining;
         [MinMaxSlider(0, 10)] public Vector2 delayForParticle;
         [SerializeField] [DisableInEditorMode] private float particleWaitingTime;
         [SerializeField] [DisableInEditorMode] private bool particleSpawned;
@@ -16,21 +17,26 @@ namespace _Root.Scripts.Spawners.Runtime.Elements
         public bool TrySpawn(Vector3 globalWaitingTime, Vector3 spawnerPosition, float distance, out Vector3 position)
         {
             position = new Vector3();
-            particleWaitingTime += Time.deltaTime;
-            if (delayForParticle.x < particleWaitingTime && particleWaitingTime < delayForParticle.y)
+            if (particleRemaining > 0)
             {
-                if (particleSpawned == false)
+                particleWaitingTime += Time.deltaTime;
+                if (delayForParticle.x < particleWaitingTime && particleWaitingTime < delayForParticle.y)
                 {
-                    particleSpawned = true;
-                    position = GetSpawnPosition(distance, spawnerPosition);
-                    return true;
+                    if (particleSpawned == false)
+                    {
+                        particleSpawned = true;
+                        position = GetSpawnPosition(distance, spawnerPosition);
+                        particleRemaining--;
+                        return true;
+                    }
+                }
+                else if (globalWaitingTime.y <= particleWaitingTime)
+                {
+                    particleWaitingTime = globalWaitingTime.x;
+                    particleSpawned = false;
                 }
             }
-            else if (globalWaitingTime.y <= particleWaitingTime)
-            {
-                particleWaitingTime = globalWaitingTime.x;
-                particleSpawned = false;
-            }
+
 
             return false;
         }
