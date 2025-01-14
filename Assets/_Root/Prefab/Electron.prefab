@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 9217384983884620831}
   - component: {fileID: 4918207102573945269}
   - component: {fileID: 4405075874887255882}
-  - component: {fileID: 3736492227014368233}
+  - component: {fileID: 8409907348589728601}
+  - component: {fileID: 6771829477374196770}
   m_Layer: 0
   m_Name: Electron
   m_TagString: Untagged
@@ -103,13 +104,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
   showDebugLine: 1
---- !u!64 &3736492227014368233
-MeshCollider:
+--- !u!58 &8409907348589728601
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2832523338458552287}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -118,10 +122,34 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!114 &6771829477374196770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832523338458552287}
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd4846f6e39ba3479d0007477623003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementsMovements: {fileID: 4405075874887255882}

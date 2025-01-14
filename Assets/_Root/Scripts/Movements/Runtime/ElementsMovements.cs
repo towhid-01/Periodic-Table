@@ -18,5 +18,6 @@ namespace _Root.Scripts.Movements.Runtime
             transform.position = Vector3.MoveTowards(transform.position, spawnerPos, moveSpeed * Time.deltaTime);
             
         }
+
     }
 }

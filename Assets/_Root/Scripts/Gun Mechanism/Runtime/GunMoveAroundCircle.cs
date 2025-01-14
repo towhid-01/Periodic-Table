@@ -1,12 +1,12 @@
 using System;
 using Pancake.Common;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Root.Scripts.Gun_Mechanism.Runtime
 {
     public class GunMoveAroundCircle : MonoBehaviour
     {
-        public Transform circleCenterPoint; 
         public float radius = 5f;     
         public float speed = 1f;
         public Camera mainCamera;
@@ -30,12 +30,12 @@ namespace _Root.Scripts.Gun_Mechanism.Runtime
         {
             var mousePosition = Input.mousePosition;
             mousePosition = mainCamera.ScreenToWorldPoint(mousePosition);
-            Debug.Log(mousePosition, this);
             var gunPosition = transform.position;
             var positionDifference = mousePosition - gunPosition;
             var gunAngleZ = Mathf.Atan2(positionDifference.y, positionDifference.x) * Mathf.Rad2Deg;
             var gunAngle = gunAngleZ - 90;
             transform.eulerAngles = new Vector3(0, 0, gunAngle);
+            
         }
 
 
