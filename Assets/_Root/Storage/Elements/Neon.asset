@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Neon
   m_EditorClassIdentifier: 
   elementName: Neon
+  elementShortName: Ne
   protons: 10
   neutrons: 10
   electrons: 10

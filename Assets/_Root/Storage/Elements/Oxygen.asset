@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Oxygen
   m_EditorClassIdentifier: 
   elementName: Oxygen
+  elementShortName: O
   protons: 8
   neutrons: 8
   electrons: 8

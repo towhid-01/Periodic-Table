@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Beryllium
   m_EditorClassIdentifier: 
   elementName: Beryllium
+  elementShortName: Be
   protons: 4
   neutrons: 5
   electrons: 4

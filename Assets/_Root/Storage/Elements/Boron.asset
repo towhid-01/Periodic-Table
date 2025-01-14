@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Boron
   m_EditorClassIdentifier: 
   elementName: Boron
+  elementShortName: B
   protons: 5
   neutrons: 6
   electrons: 5

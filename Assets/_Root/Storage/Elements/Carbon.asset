@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Carbon
   m_EditorClassIdentifier: 
   elementName: Carbon
+  elementShortName: C
   protons: 6
   neutrons: 6
   electrons: 6
