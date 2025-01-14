@@ -1,10 +1,10 @@
 {
-    "name": "Spawner.Runtime",
+    "name": "LifeCycle.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:3fcc56fdad9cb6e41bb8bd1aacbe0ab8",
         "GUID:adac8d59ad7e8504f82d387cded797a7",
-        "GUID:2bb2982fd552689428d4c3ae8bb26fb7"
+        "GUID:2bb2982fd552689428d4c3ae8bb26fb7",
+        "GUID:dff3b8b9c7079db43a75784c94d68a66"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
