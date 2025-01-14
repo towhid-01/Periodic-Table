@@ -22,6 +22,9 @@ namespace _Root.Scripts.Spawners.Runtime.Elements
         private void OnEnable()
         {
             proton.particleRemaining = element.protons;
+            neutron.particleRemaining = element.neutrons;
+            electron.particleRemaining = element.neutrons;
+            
             App.AddListener(EUpdateMode.Update, OnUpdate);
         }
 
