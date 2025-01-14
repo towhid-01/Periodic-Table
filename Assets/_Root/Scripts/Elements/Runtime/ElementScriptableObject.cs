@@ -6,6 +6,7 @@ namespace _Root.Scripts.Elements.Runtime
     public class ElementScriptableObject : ScriptableObject
     {
         public string elementName;
+        public string elementShortName;
         public int protons = 0;
         public int neutrons = 1;
         public int electrons = 1;
