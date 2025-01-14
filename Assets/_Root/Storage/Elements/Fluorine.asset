@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fluorine
   m_EditorClassIdentifier: 
   elementName: Fluorine
+  elementShortName: F
   protons: 9
   neutrons: 10
   electrons: 9

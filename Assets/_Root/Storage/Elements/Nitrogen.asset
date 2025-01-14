@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Nitrogen
   m_EditorClassIdentifier: 
   elementName: Nitrogen
+  elementShortName: N
   protons: 7
   neutrons: 7
   electrons: 7

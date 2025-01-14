@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 1612395721}
   - component: {fileID: 1612395722}
   - component: {fileID: 1612395723}
+  - component: {fileID: 1612395724}
   m_Layer: 18
   m_Name: Spawner Manager
   m_TagString: Untagged
@@ -567,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1c5d8840b15524d985c0d55153ce4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  element: {fileID: 11400000, guid: 2f58a0f028bf3404883a8b3fce175395, type: 2}
+  element: {fileID: 0}
   subatomicParticlesPrefabScriptableObject: {fileID: 11400000, guid: 07cdda4deb2a7204dae8ef4bb562df0c, type: 2}
   spawnerTransform: {fileID: 1612395716}
   spawnDistance: 10
@@ -731,6 +732,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   protonCount: 0
   neutronCount: 0
+--- !u!114 &1612395724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612395714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd54eb7fbf40b344bbda5a34da8085f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedElement: {fileID: 0}
+  scriptableElements:
+  - {fileID: 11400000, guid: e286a7993bd18454491b15e5ba819d0e, type: 2}
+  - {fileID: 11400000, guid: 31e17ca194fd80b4babb4841b2242897, type: 2}
+  - {fileID: 11400000, guid: 9d4fb5d7a3c66684e9a719175f996d2a, type: 2}
+  - {fileID: 11400000, guid: a888bddd52efb86459d50ca8707eb7d4, type: 2}
+  - {fileID: 11400000, guid: 8337bbfae1d580d4f81d7fcde4652da2, type: 2}
+  - {fileID: 11400000, guid: 266b7bb1825735b4384188dd28bd5090, type: 2}
+  - {fileID: 11400000, guid: 60d903b191f066c42b37bc15298dad3f, type: 2}
+  - {fileID: 11400000, guid: 2f58a0f028bf3404883a8b3fce175395, type: 2}
+  - {fileID: 11400000, guid: 7a85b9b985cd8e245a7e89928eb8c44d, type: 2}
+  - {fileID: 11400000, guid: f9410e71ecf1a7f44b78ba2c2f889f6d, type: 2}
 --- !u!1 &1967710856
 GameObject:
   m_ObjectHideFlags: 0

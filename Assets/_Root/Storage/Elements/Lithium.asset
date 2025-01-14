@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Lithium
   m_EditorClassIdentifier: 
   elementName: Lithium
+  elementShortName: Li
   protons: 3
   neutrons: 4
   electrons: 3

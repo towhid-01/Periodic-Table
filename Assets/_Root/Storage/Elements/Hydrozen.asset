@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87321caaa1e553c46807d892b8cccc9c, type: 3}
   m_Name: Hydrozen
   m_EditorClassIdentifier: 
-  elementName: Hydrozen
+  elementName: Hydrogen
+  elementShortName: H
   protons: 0
   neutrons: 1
   electrons: 1
