@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87321caaa1e553c46807d892b8cccc9c, type: 3}
   m_Name: Oxygen
   m_EditorClassIdentifier: 
-  elementName: Nitrogen
-  neutronCount: 8
-  protonCount: 8
-  electronCount: 8
+  elementName: Oxygen
+  protons: 8
+  neutrons: 8
+  electrons: 8
