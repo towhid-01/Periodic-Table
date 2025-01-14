@@ -265,6 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 412713156}
   - component: {fileID: 412713155}
+  - component: {fileID: 412713157}
   m_Layer: 0
   m_Name: Show Element
   m_TagString: Untagged
@@ -287,9 +288,8 @@ MonoBehaviour:
   elementBG: {fileID: 1452875467}
   nameTMP: {fileID: 576260749}
   electronCountTMP: {fileID: 1006615996}
-  elementName: 
-  currentElement: 1
-  currentElementScriptableObject: {fileID: 11400000, guid: e286a7993bd18454491b15e5ba819d0e, type: 2}
+  currentElementIndex: 0
+  selectedElementsScriptableObject: {fileID: 11400000, guid: 374fd9fc3e5b37f4a8c071e0c4bf01a9, type: 2}
 --- !u!4 &412713156
 Transform:
   m_ObjectHideFlags: 0
@@ -305,6 +305,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &412713157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412713154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e890b59930a34da1a3cd58112afd01e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {x: 96.35779, y: 10, z: 0}
+  endPosition: {x: 96.35779, y: 52, z: 0}
+  duration: 1
+  ease: 28
+  rectTransform: {fileID: 1452875466}
 --- !u!1 &576260747
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361281430}
   - component: {fileID: 1361281431}
+  - component: {fileID: 1361281432}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -890,6 +908,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccb1a5fd200d714599885291015f659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1361281432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361281429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9db269defb444b96dc32c31ff028f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedElementsScriptableObject: {fileID: 11400000, guid: 374fd9fc3e5b37f4a8c071e0c4bf01a9, type: 2}
 --- !u!1 &1409575245
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,15 +2,17 @@ using _Root.Scripts.Elements.Runtime;
 using Pancake.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Root.Scripts.Spawners.Runtime.Elements
 {
     public class ElementSpawner : MonoBehaviour
     {
-        public SelectedElementsScriptableObject element;
+        [FormerlySerializedAs("element")] public SelectedElementsScriptableObject selectedElementsScriptableObject;
         public SubatomicParticlesPrefabScriptableObject subatomicParticlesPrefabScriptableObject;
         public Transform spawnerTransform;
         public float spawnDistance = 10f;
+        public int chanceMultipler = 3;
 
         [MinMaxSlider(0, 10)] public Vector2 globalWaitingTime = new(0, 10);
 
@@ -21,10 +23,11 @@ namespace _Root.Scripts.Spawners.Runtime.Elements
 
         private void OnEnable()
         {
-            proton.particleRemaining = element.selectedElement.protons;
-            neutron.particleRemaining = element.selectedElement.neutrons;
-            electron.particleRemaining = element.selectedElement.neutrons;
-            
+            var elementScriptableObject = selectedElementsScriptableObject.GetCurrentElement();
+            proton.particleRemaining = elementScriptableObject.protons * chanceMultipler;
+            neutron.particleRemaining = elementScriptableObject.neutrons * chanceMultipler;
+            electron.particleRemaining = elementScriptableObject.electrons * chanceMultipler;
+
             App.AddListener(EUpdateMode.Update, OnUpdate);
         }
 
