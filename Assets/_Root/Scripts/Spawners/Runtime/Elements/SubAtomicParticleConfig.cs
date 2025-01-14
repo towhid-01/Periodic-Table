@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 namespace _Root.Scripts.Spawners.Runtime.Elements
 {
     [Serializable]
-    public struct SubAtomicParticleConfig
+    public class SubAtomicParticleConfig
     {
         [FormerlySerializedAs("particleCount")] [SerializeField] [DisableInEditorMode] public int particleRemaining;
         [MinMaxSlider(0, 10)] public Vector2 delayForParticle;
