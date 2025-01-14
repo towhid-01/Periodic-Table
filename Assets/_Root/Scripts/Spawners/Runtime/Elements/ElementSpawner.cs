@@ -7,7 +7,7 @@ namespace _Root.Scripts.Spawners.Runtime.Elements
 {
     public class ElementSpawner : MonoBehaviour
     {
-        public ElementScriptableObject element;
+        public SelectedElementsScriptableObject element;
         public SubatomicParticlesPrefabScriptableObject subatomicParticlesPrefabScriptableObject;
         public Transform spawnerTransform;
         public float spawnDistance = 10f;
@@ -21,9 +21,9 @@ namespace _Root.Scripts.Spawners.Runtime.Elements
 
         private void OnEnable()
         {
-            proton.particleRemaining = element.protons;
-            neutron.particleRemaining = element.neutrons;
-            electron.particleRemaining = element.neutrons;
+            proton.particleRemaining = element.selectedElement.protons;
+            neutron.particleRemaining = element.selectedElement.neutrons;
+            electron.particleRemaining = element.selectedElement.neutrons;
             
             App.AddListener(EUpdateMode.Update, OnUpdate);
         }
