@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1c5d8840b15524d985c0d55153ce4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  element: {fileID: 11400000, guid: 3b2c135e20e8fa44a8f304b64aa977a8, type: 2}
+  element: {fileID: 11400000, guid: 2f58a0f028bf3404883a8b3fce175395, type: 2}
   subatomicParticlesPrefabScriptableObject: {fileID: 11400000, guid: 07cdda4deb2a7204dae8ef4bb562df0c, type: 2}
   spawnerTransform: {fileID: 1612395716}
   spawnDistance: 10
