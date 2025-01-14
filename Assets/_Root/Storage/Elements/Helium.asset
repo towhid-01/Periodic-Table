@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Helium
   m_EditorClassIdentifier: 
   elementName: Helium
-  neutronCount: 2
-  protonCount: 2
-  electronCount: 2
+  protons: 2
+  neutrons: 2
+  electrons: 2

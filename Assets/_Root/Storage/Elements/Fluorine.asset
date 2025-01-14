@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87321caaa1e553c46807d892b8cccc9c, type: 3}
   m_Name: Fluorine
   m_EditorClassIdentifier: 
-  elementName: Nitrogen
-  neutrons: 0
-  protons: 0
-  electrons: 0
+  elementName: Fluorine
+  protons: 9
+  neutrons: 10
+  electrons: 9
