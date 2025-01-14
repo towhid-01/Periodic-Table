@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4405075874887255882}
   - component: {fileID: 8409907348589728601}
   - component: {fileID: 6771829477374196770}
+  - component: {fileID: 4930703161955346012}
   m_Layer: 0
   m_Name: Electron
   m_TagString: Untagged
@@ -153,3 +154,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementsMovements: {fileID: 4405075874887255882}
+--- !u!114 &4930703161955346012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832523338458552287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b715d2c9b7c40e5a0bdd579748f6f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterScriptableObject: {fileID: 11400000, guid: 1d92a1010ac2b054a878d15a15c3a2ad, type: 2}

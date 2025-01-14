@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3871656369351174839}
   - component: {fileID: 219788990011218505}
   - component: {fileID: -4920107542910767828}
+  - component: {fileID: -3145892961242912444}
   m_Layer: 0
   m_Name: Proton
   m_TagString: Proton
@@ -152,3 +153,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c158e7c45d52874db173820d6fb2088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3145892961242912444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8582397324937179906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890eb866775d48068f2b9a2547f25b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterScriptableObject: {fileID: 11400000, guid: 6249083d6e4c4d847bfa5941d42a9b09, type: 2}

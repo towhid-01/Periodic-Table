@@ -3,6 +3,7 @@ using _Root.Scripts.Elements.Runtime;
 using Pancake.Common;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _Root.Scripts.UIShowElements.Runtime
@@ -12,19 +13,20 @@ namespace _Root.Scripts.UIShowElements.Runtime
         [SerializeField] private Image elementBG;
         [SerializeField] private TMP_Text nameTMP;
         [SerializeField] private TMP_Text electronCountTMP;
-        [SerializeField] private string elementName;
-        [SerializeField] private int currentElement = 1;
-        [SerializeField] private ElementScriptableObject currentElementScriptableObject;
+
+        [FormerlySerializedAs("currentElement")] [SerializeField]
+        private int currentElementIndex = 0;
+
+        [SerializeField] private SelectedElementsScriptableObject selectedElementsScriptableObject;
 
         private void Start()
         {
-            currentElement = Data.Load(elementName, 1);
-            SetElement(currentElementScriptableObject);
+            SetElement(selectedElementsScriptableObject.GetCurrentElement());
         }
 
         private void SetElement(ElementScriptableObject elementScriptableObject)
         {
-            nameTMP.text = elementScriptableObject.elementName;
+            nameTMP.text = elementScriptableObject.elementShortName;
             electronCountTMP.text = elementScriptableObject.electrons.ToString();
         }
     }
