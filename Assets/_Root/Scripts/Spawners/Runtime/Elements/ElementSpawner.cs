@@ -21,7 +21,7 @@ namespace _Root.Scripts.Spawners.Runtime.Elements
 
         private void OnEnable()
         {
-            proton.particleCount = element.protons;
+            proton.particleRemaining = element.protons;
             App.AddListener(EUpdateMode.Update, OnUpdate);
         }
 
