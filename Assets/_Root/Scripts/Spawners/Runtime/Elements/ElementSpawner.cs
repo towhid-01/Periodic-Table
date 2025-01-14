@@ -1,4 +1,6 @@
 using _Root.Scripts.Elements.Runtime;
+using Pancake.Common;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace _Root.Scripts.Spawners.Runtime.Elements
@@ -9,58 +11,38 @@ namespace _Root.Scripts.Spawners.Runtime.Elements
         public SubatomicParticlesPrefabScriptableObject subatomicParticlesPrefabScriptableObject;
         public Transform spawnerTransform;
         public float spawnDistance = 10f;
-        int protonCount;
-        int neutronCount;
-        int electroncount;
+
+        [MinMaxSlider(0, 10)] public Vector2 globalWaitingTime = new(0, 10);
+
+        [SerializeField] private SubAtomicParticleConfig proton;
+        [SerializeField] private SubAtomicParticleConfig neutron;
+        [SerializeField] private SubAtomicParticleConfig electron;
+
 
         private void OnEnable()
         {
-            protonCount = element.protons;
-            neutronCount = element.neutrons;
-            electroncount = element.electrons;
-
-            ParticleSpawnerforElectron();
-            ParticleSpawnerforNeutron();
-            ParticleSpawnerforProton();
+            proton.particleCount = element.protons;
+            App.AddListener(EUpdateMode.Update, OnUpdate);
         }
 
-        void ParticleSpawnerforElectron()
+        private void OnDisable()
         {
-            if (electroncount > 0)
+            App.RemoveListener(EUpdateMode.Update, OnUpdate);
+        }
+
+        private void OnUpdate()
+        {
+            Spawn(proton, subatomicParticlesPrefabScriptableObject.proton);
+            Spawn(electron, subatomicParticlesPrefabScriptableObject.electron);
+            Spawn(neutron, subatomicParticlesPrefabScriptableObject.neutron);
+        }
+
+        private void Spawn(SubAtomicParticleConfig particleConfig, GameObject prefab)
+        {
+            if (particleConfig.TrySpawn(globalWaitingTime, spawnerTransform.position, spawnDistance, out var position))
             {
-                Instantiate(subatomicParticlesPrefabScriptableObject.electrons, GetSpawnPosition(spawnDistance), Quaternion.identity);
-                protonCount -= 1;
-                Invoke("ParticleSpawnerforElectron", Random.Range(2, 4));
+                Instantiate(prefab, position, Quaternion.identity);
             }
-        }
-        void ParticleSpawnerforNeutron()
-        {
-            if (neutronCount > 0)
-            {
-                Instantiate(subatomicParticlesPrefabScriptableObject.neutrons, GetSpawnPosition(spawnDistance), Quaternion.identity);
-                neutronCount -= 1;
-                Invoke("ParticleSpawnerforNeutron", Random.Range(2, 4));
-            }
-        }
-        void ParticleSpawnerforProton()
-        {
-            if (protonCount > 0)
-            {
-                Instantiate(subatomicParticlesPrefabScriptableObject.protons, GetSpawnPosition(spawnDistance), Quaternion.identity);
-                protonCount -= 1;
-                Invoke("ParticleSpawnerforProton", Random.Range(2, 4));
-            }
-        }
-
-        Vector3 GetSpawnPosition(float distance)
-        {
-
-            float angle = Random.Range(0f, 2f * Mathf.PI);
-
-            // Convert polar coordinates (radius, angle) to Cartesian coordinates (x, y)
-            float x = Mathf.Cos(angle) * distance;
-            float y = Mathf.Sin(angle) * distance;
-            return new Vector3(x, y, 0f) + spawnerTransform.position;
         }
     }
 }
