@@ -9,7 +9,7 @@ namespace _Root.Scripts.Movements.Runtime
     
         void Update()
         {
-            Vector2 spawnerPos = SpawnerManager.TransformInstance.position;
+            Vector2 spawnerPos = MainTargetSingleton.transformInstance.position;
             Vector2 subatomicParticlesPos = transform.position;
             Vector2 difference = spawnerPos - subatomicParticlesPos;
             var getAngleZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
